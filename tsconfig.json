@@ -1,0 +1,11 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2017",
+    "lib": ["esnext"],
+    "outDir": "./",
+    "rootDir": "./src"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "postcss-oklch-relative-chroma",
+  "version": "0.1.0",
+  "description": "PostCSS plugin to use relative chroma in oklch().",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "postcss-oklch-relative-chroma",
+    "oklch",
+    "relative chroma"
+  ],
+  "scripts": {
+    "unit": "node --test index.test.js",
+    "test": "npm run unit && eslint .",
+    "eslint-checks": "pnpm exec eslint \"./src/**/*\"",
+    "type-checks": "tsc --noEmit",
+    "all-checks": "pnpm eslint-checks & pnpm type-checks",
+    "watch": "pnpm exec tsc --watch",
+    "build": "pnpm exec tsc"
+  },
+  "author": "Doko Zero <17993323+dokozero@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": "dokozero/postcss-oklch-relative-chroma",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.27"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ]
+  },
+  "dependencies": {
+    "culori": "^4.0.1"
+  }
+}
