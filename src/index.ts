@@ -4,6 +4,7 @@ import getConvertedOklchCode from './helpers/getConvertedOklchCode/getConvertedO
 // TODO
 // Test also if gradient 'in oklch' don't create a bug.
 // Work with 0.123 for L?
+// Opacity?
 // Add automatic sRGB fallback with chroma reduction method?
 //  Or another dedicated script?
 
