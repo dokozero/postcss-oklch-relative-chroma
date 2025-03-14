@@ -2,6 +2,8 @@
 
 A PostCSS plugin to use relative chroma in an upgraded `oklch()` CSS notation.
 
+The plugin is not yet published on npm. To use it, you can download the dist folder and configure your postcss.config.js file to use it. Check the [documentation repo](https://github.com/dokozero/oklch-css-relative-chroma-documentation) to see how I use it.
+
 This is a work in progress which might change in the future.
 
 The proposal is:
