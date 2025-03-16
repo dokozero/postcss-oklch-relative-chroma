@@ -10,7 +10,7 @@ import getConvertedOklchCode from './helpers/getConvertedOklchCode/getConvertedO
 
 export default () => {
   return {
-    postcssPlugin: 'postcss-oklch-relative-chroma-notation',
+    postcssPlugin: 'postcss-oklch-relative-chroma',
     Declaration(decl: any) {
       if (!decl.value.includes('oklch')) return
       decl.value = decl.value.replace(OKLCH_RELATIVE_CHROMA_REGEX, getConvertedOklchCode)
