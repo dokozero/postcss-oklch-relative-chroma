@@ -1,4 +1,4 @@
-import { OKLCH_RELATIVE_CHROMA_REGEX } from './data.js'
+import { OKLCH_RELATIVE_CHROMA_REGEX } from './constants.js'
 import getConvertedOklchCode from './helpers/getConvertedOklchCode/getConvertedOklchCode.js'
 
 export default () => {

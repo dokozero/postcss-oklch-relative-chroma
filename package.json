@@ -3,6 +3,9 @@
   "version": "0.3.0",
   "description": "PostCSS plugin to use relative chroma in oklch().",
   "type": "module",
+  "author": "Doko Zero <17993323+dokozero@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": "dokozero/postcss-oklch-relative-chroma",
   "keywords": [
     "postcss",
     "css",
@@ -24,9 +27,6 @@
     "tsc-watch": "pnpm exec tsc --watch",
     "build": "pnpm exec tsc"
   },
-  "author": "Doko Zero <17993323+dokozero@users.noreply.github.com>",
-  "license": "MIT",
-  "repository": "dokozero/postcss-oklch-relative-chroma",
   "engines": {
     "node": ">=18.0.0"
   },

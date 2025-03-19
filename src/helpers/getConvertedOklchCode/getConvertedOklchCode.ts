@@ -1,4 +1,4 @@
-import { COLOR_SPACE_CULORI_NAME_MAPPING, DEBUG } from '../../data.js'
+import { COLOR_SPACE_CULORI_NAME_MAPPING, DEBUG } from '../../constants.js'
 import { AbsoluteChroma, ColorSpaceRegularName, Hue, Lightness, RelativeChroma } from '../../types.js'
 import convertRelativeChromaToAbsolute from '../convertRelativeChromaToAbsolute/convertRelativeChromaToAbsolute.js'
 
