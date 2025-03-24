@@ -1,6 +1,7 @@
 import { COLOR_SPACE_CULORI_NAME_MAPPING, DEBUG } from '../../constants.js'
-import { AbsoluteChroma, ColorSpaceRegularName, Hue, Lightness, RelativeChroma } from '../../types.js'
+import { AbsoluteChroma, ColorSpaceRegularName } from '../../types.js'
 import convertRelativeChromaToAbsolute from '../convertRelativeChromaToAbsolute/convertRelativeChromaToAbsolute.js'
+import getClampedLrch from '../getClampedLrch/getClampedLrch.js'
 
 export default function getConvertedOklchCode(
   match: any,
@@ -20,10 +21,15 @@ export default function getConvertedOklchCode(
     return match
   }
 
+  // In case some values are outside their range.
+  const clampedLrch = getClampedLrch({
+    l: parseFloat(lightness),
+    rc: parseFloat(relativeChroma),
+    h: parseFloat(hue)
+  })
+
   const absoluteChroma: AbsoluteChroma = convertRelativeChromaToAbsolute({
-    lightness: parseFloat(lightness) as Lightness,
-    relativeChroma: parseFloat(relativeChroma) as RelativeChroma,
-    hue: parseFloat(hue) as Hue,
+    lrch: clampedLrch,
     colorSpace: colorSpaceCuloriName
   })
 
