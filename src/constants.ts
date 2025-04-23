@@ -1,10 +1,10 @@
-import { ColorSpaceRegularName, ColorSpaceCuloriName } from './types.js'
+import { GamutRegularName, GamutCuloriName } from './types.js'
 
 export const DEBUG = false
 
 export const MAX_CHROMA_REC2020 = 0.467
 
-export const COLOR_SPACE_CULORI_NAME_MAPPING: Record<ColorSpaceRegularName, ColorSpaceCuloriName> = {
+export const GAMUT_CULORI_NAME_MAPPING: Record<GamutRegularName, GamutCuloriName> = {
   'srgb': 'rgb',
   'display-p3': 'p3',
   'rec2020': 'rec2020'

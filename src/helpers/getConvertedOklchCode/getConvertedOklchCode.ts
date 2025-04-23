@@ -1,22 +1,22 @@
-import { COLOR_SPACE_CULORI_NAME_MAPPING, DEBUG } from '../../constants.js'
-import { AbsoluteChroma, ColorSpaceRegularName } from '../../types.js'
+import { GAMUT_CULORI_NAME_MAPPING, DEBUG } from '../../constants.js'
+import { AbsoluteChroma, GamutRegularName } from '../../types.js'
 import convertRelativeChromaToAbsolute from '../convertRelativeChromaToAbsolute/convertRelativeChromaToAbsolute.js'
 import getClampedLrch from '../getClampedLrch/getClampedLrch.js'
 
 export default function getConvertedOklchCode(
   match: any,
-  colorSpaceRegularName: ColorSpaceRegularName,
+  gamutRegularName: GamutRegularName,
   lightness: string,
   relativeChroma: string,
   hue: string
 ): string {
-  // We need to convert the color space name to the one used in Culori as they are different from CSS one like in color().
-  const colorSpaceCuloriName = COLOR_SPACE_CULORI_NAME_MAPPING[colorSpaceRegularName]
+  // We need to convert the gamut name to the one used in Culori as they are different from CSS one like in color().
+  const gamutCuloriName = GAMUT_CULORI_NAME_MAPPING[gamutRegularName]
 
-  // If colorSpace value is not in COLOR_SPACE_CULORI_NAME_MAPPING we get and undefined value.
-  if (colorSpaceCuloriName === undefined) {
+  // If gamut value is not in GAMUT_CULORI_NAME_MAPPING we get and undefined value.
+  if (gamutCuloriName === undefined) {
     console.error(
-      `Invalid color space: '${colorSpaceRegularName}', supported color spaces are: ${Object.keys(COLOR_SPACE_CULORI_NAME_MAPPING).join(', ')}`
+      `Invalid gamut: '${gamutRegularName}', supported gamuts are: ${Object.keys(GAMUT_CULORI_NAME_MAPPING).join(', ')}`
     )
     return match
   }
@@ -30,7 +30,7 @@ export default function getConvertedOklchCode(
 
   const absoluteChroma: AbsoluteChroma = convertRelativeChromaToAbsolute({
     lrch: clampedLrch,
-    colorSpace: colorSpaceCuloriName
+    gamut: gamutCuloriName
   })
 
   const convertedOklchCode = `oklch(${lightness}% ${absoluteChroma} ${hue})`

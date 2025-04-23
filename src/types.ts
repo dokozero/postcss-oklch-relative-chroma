@@ -16,6 +16,6 @@ export type Lrch = {
   h: Hue
 }
 
-export type ColorSpaceRegularName = 'srgb' | 'display-p3' | 'rec2020'
+export type GamutRegularName = 'srgb' | 'display-p3' | 'rec2020'
 
-export type ColorSpaceCuloriName = 'rgb' | 'p3' | 'rec2020'
+export type GamutCuloriName = 'rgb' | 'p3' | 'rec2020'
