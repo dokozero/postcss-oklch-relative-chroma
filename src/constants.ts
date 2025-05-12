@@ -7,6 +7,7 @@ export const MAX_CHROMA_REC2020 = 0.467
 export const GAMUT_CULORI_NAME_MAPPING: Record<GamutRegularName, GamutCuloriName> = {
   'srgb': 'rgb',
   'display-p3': 'p3',
+  'p3': 'p3',
   'rec2020': 'rec2020'
 }
 
