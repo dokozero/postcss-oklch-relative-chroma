@@ -14,6 +14,8 @@ Exemple: `oklch(p3 80% 100% 20)` which means: "for a lightness of 80 % and a h
 
 This is a work in progress that might change in the future.
 
+There is a [discussion in csswg-drafts repo](https://github.com/w3c/csswg-drafts/issues/11946).
+
 ## How to use it
 
 The plugin has not yet been published on NPM. To use it, you can download the dist folder and configure your postcss.config.js file to use it.
