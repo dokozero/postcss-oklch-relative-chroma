@@ -1,6 +1,6 @@
 {
   "name": "postcss-oklch-relative-chroma",
-  "version": "0.4.0",
+  "version": "0.4.5",
   "description": "PostCSS plugin to use relative chroma in oklch().",
   "type": "module",
   "author": "Doko Zero <17993323+dokozero@users.noreply.github.com>",

@@ -4,7 +4,7 @@ A PostCSS plugin to use relative chroma in an upgraded `oklch()` CSS notation. C
 
 The proposal is:
 
-```markdown
+```
 oklch(gamut L RC H)
 ```
 
